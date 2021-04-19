@@ -1,0 +1,32 @@
+.features
+    padding-top: $padding-vertical-sm
+    padding-bottom: $padding-vertical
+    &__wrap
+    &__list
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        grid-gap: $base * 13
+    &__item
+        background-color: $primary
+        border-radius: 20px
+        padding: ($base * 3) ($base * 4)
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 1fr min-content min-content
+        &-img
+            width: 85px
+            height: 85px
+            justify-self: end
+            margin-bottom: $base * 3
+        &-title
+            font-size: 18px
+            line-height: 26px
+            font-weight: $fw-bold
+            color: $white
+            margin-bottom: $base * 1
+        &-info
+            font-size: 14px
+            line-height: 22px
+            font-weight: fw-regular
+            color: $white
+            margin: 0

@@ -1,0 +1,42 @@
+.services
+    padding-bottom: $padding-vertical-sm
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        text-align: center
+        margin-bottom: $base * 20
+        & span
+            font-weight: $fw-regular
+    &__list
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        grid-column-gap: $base * 39
+        grid-row-gap: $base * 21
+        margin-bottom: $base * 20
+    &__item
+        display: grid
+        grid-template-rows: min-content 1fr min-content
+        &-title
+            color: $main-info
+            margin-bottom: $base * 3
+            font-weight: fw-bold
+        &-info
+            color: $main-info
+            margin: 0
+            margin-bottom: $base * 10
+            font-size: 16px
+            line-height: 26px
+        &-link
+            text-decoration: none
+            color: $primary
+            display: inline-grid
+            grid-auto-flow: column
+            grid-column-gap: $base * 2
+            justify-self: start
+            align-items: center
+            &-img
+                width: 14px
+                height: 9px
+                fill: $primary
