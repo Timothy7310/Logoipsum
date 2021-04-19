@@ -1,0 +1,38 @@
+.header
+    padding-top: $half-base * 13
+    padding-bottom: $half-base * 9
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__list
+        display: inline-grid
+        grid-auto-flow: column
+        column-gap: $base * 8
+    &__link
+        text-decoration: none
+        font-size: 14px
+        line-height: 22px
+        color: $main-info
+        font-weight: $fw-bold
+    &__social
+        display: inline-grid
+        grid-auto-flow: column
+        column-gap: $half-base * 7
+        &-item
+            width: 32px
+            height: 32px
+            border-radius: 50%
+            background-color: $secondary
+        &-link
+            width: 100%
+            height: 100%
+            display: block
+            position: relative
+        &-img
+            width: 17px
+            height: 17px
+            @include center
+.logo
+    &__img
+        width: 145px
+        height: 28px
