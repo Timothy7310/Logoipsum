@@ -1,0 +1,31 @@
+.main
+    padding-top: $padding-vertical
+    padding-bottom: $padding-vertical
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__text
+        width: 540px
+        &-subtitle
+            font-size: 25px
+            line-height: 33px
+            color: $primary
+            font-weight: $fw-regular
+            margin-bottom: $base * 4
+            display: block
+        &-title
+            color: $main-info
+            margin-bottom: $base * 3
+        &-info
+            color: $main-info
+            font-size: 18px
+            line-height: 32px
+            margin: 0
+            margin-bottom: $base * 3
+    &__img
+        @include rotate-img
+        width: 518px
+        height: 387px
+        box-shadow: 48px 24px 48px rgba(24, 37, 56, 0.12)
+        &-wrap
+            transform: rotate(-7deg)
