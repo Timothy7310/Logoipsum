@@ -8,7 +8,7 @@ html
 
 body
     margin: 0
-    font-family: 'Manrope', sans-serif
+    @include manrope
 img
     max-width: 100%
 ul
@@ -16,5 +16,35 @@ ul
     padding: 0
     margin: 0
 .container
-    max-width: 1346px
+    max-width: 1171px
     margin: 0px auto
+
+h1,
+h2,
+h3,
+h4,
+h6,
+    padding: 0
+    margin: 0
+
+h1
+    font-size: 40px
+    line-height: 48px
+    font-weight: $fw-extrabold
+h2
+    font-size: 36px
+    line-height: 64px
+    font-weight: $fw-extrabold
+h3
+    font-size: 24px
+    line-height: 32px
+    font-weight: $fw-semibold
+h4
+    font-size: 18px
+    line-height: 26px
+    font-weight: $fw-bold
+
+ul
+    list-style: none
+    padding: 0
+    margin: 0
