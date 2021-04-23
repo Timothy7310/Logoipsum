@@ -1,0 +1,106 @@
+.blog
+    padding-bottom: $padding-vertical-sm
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        color: $main-info
+        text-align: center
+        margin-bottom: $base
+    &__subtitle
+        color: $main-info
+        font-weight: $fw-regular
+        font-size: 18px
+        line-height: 32px
+        max-width: 540px
+        text-align: center
+        margin-bottom: $base * 11
+    &-cards
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: $half-base * 25
+    &-card
+        &__img
+            width: 100%
+            height: 200px
+            object-fit: cover
+            margin-bottom: $half-base * 3
+        &-info
+            display: flex
+            align-items: center
+            &__name
+                font-size: 12px
+                line-height: 20px
+                color: $primary
+                font-weight: $fw-regular
+                max-width: 130px
+                margin-right: $base * 5
+                position: relative
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 1px
+                    height: 9px
+                    background-color: #EEEEEE
+                    right: -10px
+            &__time
+                font-size: 12px
+                line-height: 20px
+                color: #999999
+                font-weight: $fw-regular
+                margin-right: $base * 5
+                position: relative
+                &::after
+                    content: ''
+                    display: block
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 1px
+                    height: 9px
+                    background-color: #EEEEEE
+                    right: -10px
+            &__button
+                border: none
+                background-color: transparent
+                display: grid
+                grid-auto-flow: column
+                grid-column-gap: $base
+                align-items: center
+                font-size: 12px
+                line-height: 20px
+                font-weight: $fw-regular
+                color: #999999
+                padding: 0
+                cursor: pointer
+                &-img
+                    width: 12px
+                    height: 12px
+                &--comments
+                    margin-right: $base * 5
+                    position: relative
+                    &::after
+                        content: ''
+                        display: block
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        width: 1px
+                        height: 9px
+                        background-color: #EEEEEE
+                        right: -10px
+        &__title
+            color: $main-info
+            margin-bottom: $half-base * 5
+        &__info
+            margin: 0
+            font-size: 14px
+            line-height: 21px
+            color: $second-info
