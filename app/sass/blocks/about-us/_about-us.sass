@@ -1,0 +1,32 @@
+.about-us
+    padding-top: $padding-vertical
+    padding-bottom: $padding-vertical
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__img
+        @include rotate-img
+        width: 475px
+        height: 355px
+        box-shadow: 48px 24px 48px rgba(24, 37, 56, 0.12)
+        &-wrap
+            transform: rotate(-7deg)
+            align-self: flex-end
+    &__text
+        width: 500px
+        &-title
+            color: $main-info
+            margin-bottom: $base * 5
+            line-height: 44px
+        &-subtitle
+            font-size: 30px
+            line-height: 38px
+            color: $main-info
+            font-weight: $fw-regular
+            margin-bottom: $base * 3
+            display: block
+        &-info
+            margin: 0
+            color: $main-info
+            font-size: 16px
+            line-height: 26px
