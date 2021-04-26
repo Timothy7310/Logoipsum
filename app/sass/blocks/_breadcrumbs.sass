@@ -1,0 +1,21 @@
+.breadcrumbs
+    padding: ($base * 10) 0
+    background-color: $primary
+    &__wrap
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        text-align: center
+        color: $white
+        margin-bottom: $base * 3
+    &__list
+        display: flex
+        align-items: center
+    &__item:not(:last-child)
+        &::after
+            content: '/'
+    &__link
+        font-size: 16px
+        font-weight: $fw-regular
+        color: $main-info
