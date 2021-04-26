@@ -2,8 +2,13 @@
     padding-top: $half-base * 13
     padding-bottom: $half-base * 9
     &__wrap
-        display: flex
+        display: grid
+        grid-auto-flow: column
+        align-items: center
         justify-content: space-between
+        grid-template-columns: 1fr min-content 1fr
+    &__nav
+        justify-self: start
     &__list
         display: inline-grid
         grid-auto-flow: column
@@ -15,6 +20,7 @@
         color: $main-info
         font-weight: $fw-bold
     &__social
+        justify-self: end
         display: inline-grid
         grid-auto-flow: column
         column-gap: $half-base * 7

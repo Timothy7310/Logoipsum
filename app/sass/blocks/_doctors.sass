@@ -1,6 +1,8 @@
 .doctors
-    padding-bottom: $padding-vertical
+    padding-bottom: $padding-vertical-sm
     &__wrap
+        display: flex
+        flex-direction: column
     &__title
         margin-bottom: $base * 10
         color: $main-info
@@ -43,3 +45,22 @@
                 width: 16px
                 height: 16px
                 fill: $primary
+    &-pagination
+        align-items: flex-end
+        margin-top: $base * 15
+        &__list
+            display: inline-grid
+            grid-auto-flow: column
+            grid-column-gap: $base * 2
+        &__btn
+            width: 46px
+            height: 46px
+            border: none
+            background-color: #F6F6F6
+            color: #BBBBBB
+            cursor: pointer
+            font-size: 20px
+            font-weight: $fw-semibold
+            &--active
+                background-color: $primary
+                color: $white
