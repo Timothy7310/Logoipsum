@@ -27,7 +27,10 @@
             height: 400px
         &__wrap
             grid-template-columns: 430px 450px
-
+    .services
+        &__list
+            grid-column-gap: $base * 15
+            grid-row-gap: $base * 17
 @media (max-width:992px)
     .container
         width: 700px
@@ -94,6 +97,12 @@
             &-title
                 font-size: 20px
                 line-height: 28px
+    .services
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: $base * 25
+        &__subtitle
+            font-size: 34px
 @media (max-width:767px)
     .container
         width: 550px
@@ -216,7 +225,10 @@
             &:first-child
                 grid-column: 1
                 grid-row: 1
-
+    .services
+        &__list
+            grid-column-gap: $half-base * 35
+            grid-row-gap: $half-base * 25
 @media (max-width:576px)
     .container
         width: 90%
@@ -254,3 +266,10 @@
         &__list
             grid-template-columns: 1fr
             grid-row-gap: $base * 5
+    .services
+        &__subtitle
+            font-size: 30px
+            line-height: 36px
+        &__list
+            grid-template-columns: minmax(min-content,300px)
+            grid-row-gap: $base * 11
