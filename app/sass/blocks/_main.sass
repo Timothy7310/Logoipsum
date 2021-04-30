@@ -1,6 +1,19 @@
 .main
     padding-top: $padding-vertical
     padding-bottom: $padding-vertical
+    position: relative
+    overflow: hidden
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        width: 740px
+        height: 740px
+        border-radius: 50%
+        background-color: $primary
+        z-index: -1
+        top: -180px
+        right: -230px
     &__wrap
         display: flex
         justify-content: space-between
