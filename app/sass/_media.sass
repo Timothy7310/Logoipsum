@@ -14,6 +14,13 @@
         &__img
             width: 433px
             height: 323px
+    .features
+        &__list
+            grid-gap: $base * 6
+        &__item
+            &-img
+                width: 53px
+                height: 53px
 @media (max-width:992px)
     .container
         width: 700px
@@ -25,7 +32,7 @@
         line-height: 58px
     .header
         &__list
-            column-gap: $base * 4
+            grid-column-gap: $base * 4
     .main
         &::before
             width: 544px
@@ -38,6 +45,16 @@
             margin-bottom: $base * 10
         &__img-wrap
             align-self: flex-end
+    .features
+        &__list
+            grid-template-columns: repeat(2, min-content)
+            justify-content: space-between
+            grid-row-gap: $base * 15
+        &__item
+            width: 280px
+            &-img
+                width: 83px
+                height: 83px
 @media (max-width:767px)
     .container
         width: 550px
@@ -131,7 +148,11 @@
         &::before
             width: 486px
             height: 486px
-
+    .features
+        &__list
+            grid-row-gap: $base * 10
+        &__item
+            width: 250px
 @media (max-width:576px)
     .container
         width: 90%
@@ -153,3 +174,9 @@
             width: 90%
             height: 210px
             margin-left: 32px
+    .features
+        &__list
+            grid-template-columns: minmax(min-content,300px)
+            justify-content: center
+        &__item
+            width: inherit
