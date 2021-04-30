@@ -7,6 +7,8 @@
         align-items: center
         justify-content: space-between
         grid-template-columns: 1fr min-content 1fr
+    &__burger
+        display: none
     &__nav
         justify-self: start
     &__list
@@ -24,6 +26,8 @@
         display: inline-grid
         grid-auto-flow: column
         column-gap: $half-base * 7
+        &--mb
+            display: none
         &-item
             width: 32px
             height: 32px

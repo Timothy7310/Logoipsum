@@ -5,9 +5,111 @@
 @media (max-width:992px)
     .container
         width: 700px
+    h1
+        font-size: 38px
+        line-height: 42px
+    h2
+        font-size: 34px
+        line-height: 58px
+    .header
+        &__list
+            column-gap: $base * 4
 @media (max-width:767px)
     .container
         width: 550px
+    h3
+        font-size: 21px
+        line-height: 29px
+    body
+        &.lock
+            overflow: hidden
+    .header
+        &__wrap
+            grid-template-columns: min-content min-content
+        &__logo
+            position: relative
+            z-index: 6
+        &__nav
+            position: fixed
+            z-index: 5
+            top: -100%
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: $white
+            padding-top: $base * 25
+            overflow: auto
+            transition: $transition-ease-in-out
+            display: grid
+            &.active
+                top: 0
+        &__list
+            grid-auto-flow: row
+            grid-row-gap: $base * 10
+            width: 100%
+            justify-content: center
+            overflow-y: auto
+            margin: ($half-base * 15) 0
+        &__item
+            justify-self: center
+        &__link
+            font-size: 18px
+            line-height: 26px
+        &__social
+            display: none
+            &--mb
+                display: grid
+        &__burger
+            display: block
+            position: relative
+            z-index: 6
+            width: 40px
+            height: 30px
+            border: none
+            background-color: transparent
+            cursor: pointer
+            transition: $transition-ease-in-out
+            grid-column: 2
+            grid-row: 1
+            justify-self: end
+            &-span
+                position: absolute
+                width: 100%
+                height: 2px
+                left: 0
+                transition: $transition-ease-in-out
+                background-color: $primary
+                &--1
+                    top: 0
+                    &.active
+                        transform: rotate(45deg)
+                        transform-origin: 5%
+                        width: 44px
+                &--2,
+                &--3
+                    top: 13.5px
+                &--2
+                    &.active
+                        transform: translateX(-40px)
+                        background-color: transparent
+                &--3
+                    right: 0
+                    &.active
+                        transform: translateX(40px)
+                        background-color: transparent
+                &--4
+                    bottom: 0
+                    &.active
+                        transform-origin: 5%
+                        transform: rotate(-45deg)
+                        width: 44px
+
 @media (max-width:576px)
     .container
         width: 90%
+    h1
+        font-size: 30px
+        line-height: 38px
+    h2
+        font-size: 28px
+        line-height: 38px
