@@ -144,6 +144,29 @@
                 grid-column: 1 / 3
                 justify-self: center
                 max-width: 335px
+    .footer
+        &__wrap
+            grid-template-columns: repeat(3,1fr)
+            grid-template-rows: min-content min-content 1fr
+            grid-column-gap: $half-base * 25
+        &__logo
+            grid-column: 1
+            grid-row: 1
+        &__about-us
+            grid-column: 1 / 3
+            grid-row: 2
+            margin-bottom: $base * 5
+        &__contacts
+            grid-column: 1
+            grid-row: 3
+            width: 212px
+        &__social
+            grid-column: 2
+            grid-row: 3
+            justify-self: center
+        &__newsletter
+            grid-column: 3
+            grid-row: 3
 @media (max-width:767px)
     .container
         width: 550px
@@ -284,6 +307,33 @@
     .comments
         &-card
             max-width: 300px
+    .footer
+        &__wrap
+            grid-template-columns: 290px 190px
+            grid-template-rows: min-content min-content min-content
+            justify-content: space-between
+        &__logo
+            grid-column: 1
+            grid-row: 1
+        &__about-us
+            grid-column: 1
+            grid-row: 2
+            &-title
+                margin-bottom: $half-base * 9
+        &__contacts
+            grid-column: 1
+            grid-row: 3
+        &__social
+            grid-column: 2
+            grid-row: 1 / 3
+            justify-self: start
+            &-title
+                margin-bottom: $half-base * 9
+        &__newsletter
+            grid-column: 2
+            grid-row: 3
+            &-title
+                margin-bottom: $half-base * 9
 @media (max-width:576px)
     .container
         width: 90%
@@ -357,3 +407,24 @@
                 & .blog-card:last-child
                     grid-column: 1
                     max-width: inherit
+    .footer
+        &__wrap
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(auto-fit, min-content)
+            grid-row-gap: $base * 10
+        &__logo
+            grid-column: 1
+            grid-row: 1
+        &__about-us
+            grid-column: 1
+            grid-row: 2
+            margin-bottom: 0px
+        &__contacts
+            grid-column: 1
+            grid-row: 3
+        &__social
+            grid-column: 1
+            grid-row: 4
+        &__newsletter
+            grid-column: 1
+            grid-row: 5
