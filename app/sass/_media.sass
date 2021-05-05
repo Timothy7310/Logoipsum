@@ -31,6 +31,11 @@
         &__list
             grid-column-gap: $base * 15
             grid-row-gap: $base * 17
+    .comments
+        &-card
+            max-width: 280px
+            &__text
+                padding: ($half-base * 17) ($half-base * 16)
 @media (max-width:992px)
     .container
         width: 700px
@@ -108,6 +113,26 @@
             grid-template-columns: repeat(2, 1fr)
             grid-row-gap: $half-base * 25
             grid-column-gap: $half-base * 30
+    .comments
+        &-card
+            max-width: 320px
+    .swiper-slide
+        display: grid
+        opacity: 0.5
+    .swiper-slide-prev
+        & > .comments-card
+            margin: 0
+            justify-self: end
+    .swiper-slide-next
+        & > .comments-card
+            margin: 0
+            justify-self: start
+    .swiper-slide-visible
+        opacity: 1
+        & > .comments-card
+            margin: auto
+    .swiper-container
+        width: 80%
 @media (max-width:767px)
     .container
         width: 550px
@@ -245,6 +270,9 @@
 
             grid-row-gap: $base * 15
             grid-column-gap: $base * 10
+    .comments
+        &-card
+            max-width: 300px
 @media (max-width:576px)
     .container
         width: 90%
@@ -294,3 +322,16 @@
             grid-template-columns: minmax(min-content,320px)
             justify-content: center
             grid-row-gap: $base * 19
+    .comments
+        &__subtitle
+            font-size: 16px
+            line-height: 24px
+    .swiper-slide
+        opacity: 0
+        &-visible
+            opacity: 1
+    .swiper-container
+        width: 100%
+        padding-bottom: 25px
+    .swiper-pagination
+        bottom: 0px

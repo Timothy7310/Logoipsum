@@ -29,9 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
             clickable: true,
         },
 
-        slidesPerView: 3,
-        
-
+        watchSlidesVisibility: true,
+        breakpoints: {
+                // when window width is >= 320px
+            992: {
+                slidesPerView: 3,
+            },
+            767: {
+                slidesPerView: 1,
+                
+            },
+        },
         centeredSlides: true
     });
 
