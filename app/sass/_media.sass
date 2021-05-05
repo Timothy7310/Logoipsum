@@ -103,9 +103,16 @@
             grid-column-gap: $base * 25
         &__subtitle
             font-size: 34px
+    .doctors
+        &-cards
+            grid-template-columns: repeat(2, 1fr)
+            grid-row-gap: $half-base * 25
+            grid-column-gap: $half-base * 30
 @media (max-width:767px)
     .container
         width: 550px
+    h2
+        font-size: 30px
     h3
         font-size: 21px
         line-height: 29px
@@ -196,6 +203,8 @@
         &::before
             width: 486px
             height: 486px
+    .call__phone
+        display: block
     .features
         &__list
             grid-row-gap: $base * 10
@@ -226,9 +235,16 @@
                 grid-column: 1
                 grid-row: 1
     .services
+        &__subtitle
+            font-size: 30px
         &__list
             grid-column-gap: $half-base * 35
             grid-row-gap: $half-base * 25
+    .doctors
+        &-cards
+
+            grid-row-gap: $base * 15
+            grid-column-gap: $base * 10
 @media (max-width:576px)
     .container
         width: 90%
@@ -268,8 +284,13 @@
             grid-row-gap: $base * 5
     .services
         &__subtitle
-            font-size: 30px
+            font-size: 28px
             line-height: 36px
         &__list
             grid-template-columns: minmax(min-content,300px)
             grid-row-gap: $base * 11
+    .doctors
+        &-cards
+            grid-template-columns: minmax(min-content,320px)
+            justify-content: center
+            grid-row-gap: $base * 19
