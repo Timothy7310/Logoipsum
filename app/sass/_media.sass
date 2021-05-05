@@ -36,6 +36,9 @@
             max-width: 280px
             &__text
                 padding: ($half-base * 17) ($half-base * 16)
+    .blog
+        &-cards
+            grid-column-gap: 30px
 @media (max-width:992px)
     .container
         width: 700px
@@ -133,7 +136,14 @@
             margin: auto
     .swiper-container
         width: 80%
-
+    .blog-cards
+        grid-template-columns: repeat(2,1fr)
+        &--index
+            grid-row-gap: $base * 20
+            & .blog-card:last-child
+                grid-column: 1 / 3
+                justify-self: center
+                max-width: 335px
 @media (max-width:767px)
     .container
         width: 550px
@@ -336,3 +346,14 @@
         padding-bottom: 25px
     .swiper-pagination
         bottom: 0px
+    .blog
+        &__subtitle
+            font-size: 16px
+            line-height: 28px
+        &-cards
+            grid-template-columns: minmax(min-content, 350px)
+            &--index
+                grid-row-gap: $base * 15
+                & .blog-card:last-child
+                    grid-column: 1
+                    max-width: inherit
