@@ -53,6 +53,11 @@
     .departments
         &__list
             grid-template-columns: repeat(2,1fr)
+    .main-doctors
+        &__img
+            width: 400px
+        &__text
+            width: 500px
 @media (max-width:992px)
     .container
         width: 700px
@@ -200,6 +205,15 @@
             margin-bottom: $base * 4
         &__img-wrap
             align-self: flex-end
+    .main-doctors
+        &__wrap
+            flex-direction: column
+        &__img-wrap
+            order: 1
+            align-self: flex-end
+        &__text
+            align-self: flex-start
+            margin-bottom: $base * 10
 @media (max-width:767px)
     .container
         width: 550px
@@ -375,6 +389,11 @@
         &__text
             width: inherit
             margin-bottom: $base * 10
+    .main-doctors
+        &__text
+            width: inherit
+        &__img-wrap
+            align-self: center
 @media (max-width:576px)
     .container
         width: 90%
@@ -488,3 +507,9 @@
                 justify-content: center
     .departments__list
         grid-template-columns: minmax(min-content,350px)
+    .main-doctors
+        &__img
+            width: Min(100%,400px)
+            &-wrap
+                display: flex
+                justify-content: center
