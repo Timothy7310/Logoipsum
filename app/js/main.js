@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             span[i].classList.toggle('active');
         }
     });
-    // $('#burger').click(function (event) {
-    //     $('.header__burger, .header__burger-span, .header__nav').toggleClass('active');
-    //     $('body').toggleClass('lock');
-    // });
+
 
 
 
@@ -42,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         centeredSlides: true
     });
+
 
 
 
