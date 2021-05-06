@@ -39,6 +39,20 @@
     .blog
         &-cards
             grid-column-gap: 30px
+    .about-us
+        &__img
+            width: 410px
+            height: 310px
+        &__text
+            width: 480px
+    .history
+        &__text
+            width: 465px
+        &__img
+            width: 380px
+    .departments
+        &__list
+            grid-template-columns: repeat(2,1fr)
 @media (max-width:992px)
     .container
         width: 700px
@@ -167,6 +181,25 @@
         &__newsletter
             grid-column: 3
             grid-row: 3
+    .about-us
+        &__wrap
+            flex-direction: column
+        &__img-wrap
+            order: 1
+        &__text
+            margin-bottom: $base * 10
+    .history
+        &::before
+            height: 90%
+            top: 0
+            transform: translateX(0)
+        &__wrap
+            flex-direction: column
+        &__text
+            align-self: flex-start
+            margin-bottom: $base * 4
+        &__img-wrap
+            align-self: flex-end
 @media (max-width:767px)
     .container
         width: 550px
@@ -334,6 +367,14 @@
             grid-row: 3
             &-title
                 margin-bottom: $half-base * 9
+    .about-us
+        &__text
+            width: inherit
+            margin-bottom: $base * 15
+    .history
+        &__text
+            width: inherit
+            margin-bottom: $base * 10
 @media (max-width:576px)
     .container
         width: 90%
@@ -432,3 +473,18 @@
         &__newsletter
             grid-column: 1
             grid-row: 5
+    .about-us
+        &__img
+            width: 90%
+            margin-left: 24px
+            height: 250px
+            &-wrap
+                align-self: center
+    .history
+        &__img
+            width: Min(100%, 400px)
+            &-wrap
+                display: flex
+                justify-content: center
+    .departments__list
+        grid-template-columns: minmax(min-content,350px)
