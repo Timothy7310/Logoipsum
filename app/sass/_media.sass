@@ -74,6 +74,8 @@
     .blog-card-info--main-article
         grid-column: 1
         grid-row: 3
+    .feedback-form__field--subject
+        width: inherit
 @media (max-width:992px)
     .container
         width: 700px
@@ -425,6 +427,10 @@
             width: inherit
         &__img-wrap
             align-self: center
+    .main-contacts
+        &__list
+            grid-template-columns: 1fr
+            grid-row-gap: $base * 15
 @media (max-width:576px)
     .container
         width: 90%
@@ -547,3 +553,24 @@
     .main-article-card__title
         font-size: 23px
         line-height: 31px
+    #map-yandex
+        height: 300px
+    .feedback-form
+        grid-template-columns: 1fr
+
+        &__field
+            &--name
+                grid-column: 1
+                grid-row: 1
+            &--email
+                grid-column: 1
+                grid-row: 2
+            &--subject
+                grid-column: 1
+                grid-row: 3
+            &--textarea
+                grid-column: 1
+                grid-row: 4
+        &__btn
+            grid-column: 1
+            grid-row: 5
