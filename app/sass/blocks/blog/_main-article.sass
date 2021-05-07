@@ -7,14 +7,18 @@
         grid-template-rows: min-content min-content 1fr
         grid-column-gap: $half-base * 13
         grid-row-gap: $half-base * 6
-        &__img
-            width: 100%
-            &-wrap
+        &__link
+            &-img
                 grid-column: 1
                 grid-row: 1 / 4
+                text-decoration: none
+            &-title
+                grid-column: 2
+                grid-row: 1
+                text-decoration: none
+        &__img
+            width: 100%
         &__title
-            grid-column: 2
-            grid-row: 1
             font-size: 26px
             line-height: 34px
             color: $main-info
