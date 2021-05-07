@@ -1,7 +1,15 @@
 .js-focus-visible :focus:not(.focus-visible)
     outline: none
 
-.button
+button
+    &:focus
+        outline: 3px solid $focus
+        outline-offset: 2px
+.footer__newsletter-button
+    &:focus
+        outline: 3px solid $focus-second
+        outline-offset: 2px
+.feedback-form__btn
     &:focus
         outline: 3px solid $focus
         outline-offset: 2px
