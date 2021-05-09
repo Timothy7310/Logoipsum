@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 iconLayout: 'default#image',
-                iconImageHref: '../img/Contacts-us/pin.svg',
+                iconImageHref: 'img/Contacts-Us/pin.svg',
                 iconImageSize: [50, 50],
                 iconImageOffset: [-25, -50] 
             });
