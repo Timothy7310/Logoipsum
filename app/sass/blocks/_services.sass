@@ -22,6 +22,14 @@
     &__item
         display: grid
         grid-template-rows: min-content 1fr min-content
+        transition: $transition-ease-in-out
+        &--hidden
+            opacity: 0
+            position: absolute
+            clip: rect(0 0 0 0)
+            width: 1px
+            height: 1px
+            margin: -1px
         &-title
             color: $main-info
             margin-bottom: $base * 3
