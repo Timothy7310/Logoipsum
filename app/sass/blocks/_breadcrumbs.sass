@@ -15,7 +15,14 @@
     &__item:not(:last-child)
         &::after
             content: '/'
+            padding: 0 $base
+            color: $main-info
+    &__item
+        color: $main-info
+        &:last-child
+            color: $second-info
     &__link
         font-size: 16px
         font-weight: $fw-regular
-        color: $main-info
+        color: inherit
+        text-decoration: none
