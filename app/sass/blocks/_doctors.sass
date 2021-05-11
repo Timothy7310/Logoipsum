@@ -33,7 +33,7 @@
             color: $primary
             font-weight: $fw-bold
             text-transform: uppercase
-            margin-bottom: $base
+            margin-bottom: $base * 2
         &__social
             display: inline-grid
             grid-auto-flow: column
@@ -41,6 +41,7 @@
         &__link
             text-decoration: none
             &-img
-                width: 16px
-                height: 16px
+                width: 20px
+                height: 20px
                 fill: $primary
+                transition: $transition-ease-in-out

@@ -1,1 +1,126 @@
-// @media  (min-width: 993px)
+@media  (min-width: 993px)
+    .header
+        &__link
+            position: relative
+            &::after
+                display: block
+                content: ""
+                background-color: $primary
+                height: 2px
+                width: 0%
+                left: 50%
+                position: absolute
+                transition: width .3s ease-in-out
+                transform: translateX(-50%)
+            &:hover
+                &::after
+                    width: 100%
+                    transition: ease 0.5s
+        &__social-item
+            transition: $transition-ease-in-out
+            &:hover
+                background-color: transparent
+                border: 1px solid $primary
+    .logo
+        &:hover
+            .logo__img
+                fill: $animation-color
+    .button
+        &-order
+            transition: $transition-ease-in-out
+            &:hover
+                background-color: transparent
+                color: $primary
+        &-more
+            transition: $transition-ease-in-out
+            &:hover
+                & .button-more__img
+                    margin-left: 10px
+
+    .call__phone
+        position: relative
+        z-index: 2
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 0
+            left: auto
+            right: 0
+            width: 0%
+            height: 40%
+            background-color: $animation-color
+            z-index: -1
+            transition: $transition-ease
+        &:hover
+            &::after
+                width: 100%
+                left: 0
+                right: 0
+    .services__item-link
+        &:hover
+            &::after
+                width: 100%
+                left: 0
+                right: 0
+            & .services__item-link-img
+                margin-left: 10px
+    .doctors-card__link
+        &:hover
+            & .doctors-card__link-img
+                fill: $animation-color
+    .blog-card__link
+        &:hover
+            & .blog-card__title
+                color: $primary
+    .footer__contacts-link
+        position: relative
+        z-index: 2
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 2px
+            left: auto
+            right: 0
+            width: 0%
+            height: 40%
+            background-color: $animation-color
+            z-index: -1
+            transition: $transition-ease
+        &:hover
+            &::after
+                width: 100%
+                left: 0
+                right: 0
+    .footer__social-link
+        &:hover
+            .footer__social-link-img
+                fill: $animation-color
+    .footer__newsletter-button
+        transition: $transition-ease-in-out
+        &:hover
+            background-color: transparent
+            color: $primary
+    .pagination__link
+        transition: $transition-ease-in-out
+        &:hover
+            color: $primary
+        &--active
+            &:hover
+                color: $white
+    .main-article-card__link-title
+        &:hover
+            .main-article-card__title
+                color: $primary
+    .feedback-form__btn
+        transition: $transition-ease-in-out
+        &:hover
+            background-color: transparent
+            color: $primary
+    .breadcrumbs__item
+        &:not(:last-child)
+            transition: $transition-ease-in-out
+            &:hover
+                .breadcrumbs__link
+                    opacity: 0.65
