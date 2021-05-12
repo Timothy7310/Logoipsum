@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementsByTagName("head")[0].appendChild(script);
     }
 
-    let ymap = function() {
-        document.querySelector('.ymap-container').addEventListener('mouseenter', () => {
+    const ymap = function(eventName) {
+        document.querySelector('.ymap-container').addEventListener(eventName, () => {
             if (checkLoad == 0) {
                 checkLoad = 1;
                 spinner.classList.add('is-active');
@@ -184,7 +184,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    ymap();
+    ymap('mouseenter');
+    ymap('click');
 
 }, false);
 
