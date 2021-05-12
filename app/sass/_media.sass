@@ -91,6 +91,7 @@
         &__list
             grid-column-gap: $base * 4
     .main
+        padding-top: $padding-vertical-sm-992px
         &::before
             width: 544px
             height: 544px
@@ -103,6 +104,7 @@
         &__img-wrap
             align-self: flex-end
     .features
+        padding-top: $padding-vertical-sm-992px
         &__list
             grid-template-columns: repeat(2, min-content)
             justify-content: space-between
@@ -113,6 +115,8 @@
                 width: 83px
                 height: 83px
     .rules
+        padding-top: $padding-vertical-992px
+        padding-bottom: $padding-vertical-992px
         &::before
             width: 350px
             height: 350px
@@ -145,17 +149,21 @@
                 font-size: 20px
                 line-height: 28px
     .services
+        padding-bottom: $padding-vertical-992px
         &__list
             grid-template-columns: repeat(2, 1fr)
             grid-column-gap: $base * 25
         &__subtitle
             font-size: 34px
+            margin-bottom: $base * 15
     .doctors
+        padding-bottom: $padding-vertical-992px
         &-cards
             grid-template-columns: repeat(2, 1fr)
             grid-row-gap: $half-base * 25
             grid-column-gap: $half-base * 30
     .comments
+        padding-bottom: $padding-vertical-992px
         &-card
             max-width: 320px
     .swiper-slide
@@ -175,6 +183,8 @@
             margin: auto
     .swiper-container
         width: 80%
+    .blog
+        padding-bottom: $padding-vertical-992px
     .blog-cards
         grid-template-columns: repeat(2,1fr)
         &--index
@@ -206,7 +216,10 @@
         &__newsletter
             grid-column: 3
             grid-row: 3
+    .breadcrumbs
+        padding: ($half-base * 15) 0
     .about-us
+        padding-top: $padding-vertical-sm-992px
         &__wrap
             flex-direction: column
         &__img-wrap
@@ -220,12 +233,16 @@
             transform: translateX(0)
         &__wrap
             flex-direction: column
+            padding-top: $base * 4
         &__text
             align-self: flex-start
             margin-bottom: $base * 4
         &__img-wrap
             align-self: flex-end
+    .departments
+        padding-top: $padding-vertical-992px
     .main-doctors
+        padding-top: $padding-vertical-sm-992px
         &__wrap
             flex-direction: column
         &__img-wrap
@@ -250,6 +267,11 @@
     .blog-card-info--main-article
         grid-column: 1
         grid-row: 3
+    .feedback
+        padding-top: $padding-vertical-992px
+        padding-bottom: $padding-vertical-992px
+        &__title
+            margin-bottom: $half-base * 25
 @media (max-width:767px)
     .container
         width: 550px
@@ -345,8 +367,11 @@
         &::before
             width: 486px
             height: 486px
-    .call__phone
-        display: block
+    .call
+        padding-top: $half-base * 15
+        padding-bottom: $half-base * 15
+        &__phone
+            display: block
     .features
         &__list
             grid-row-gap: $base * 10
@@ -425,6 +450,8 @@
         &__text
             width: inherit
             margin-bottom: $base * 10
+    .departments
+        padding-bottom: $padding-vertical-992px
     .main-doctors
         &__text
             width: inherit
@@ -433,7 +460,7 @@
     .main-contacts
         &__list
             grid-template-columns: 1fr
-            grid-row-gap: $base * 15
+            grid-row-gap: $base * 10
 @media (max-width:576px)
     .container
         width: 90%
@@ -462,7 +489,8 @@
         &__item
             width: inherit
     .rules
-        padding-top: 30px
+        padding-top: $padding-vertical-sm-992px
+        padding-bottom: $padding-vertical-sm-992px
         &::before
             top: 60px
         &__wrap
@@ -481,13 +509,17 @@
             line-height: 36px
         &__list
             grid-template-columns: minmax(min-content,300px)
-            grid-row-gap: $base * 11
+            grid-row-gap: $base * 15
+            margin-bottom: $base * 15
+        &__item-info
+            margin-bottom: $base * 6
     .doctors
         &-cards
             grid-template-columns: minmax(min-content,320px)
             justify-content: center
             grid-row-gap: $base * 19
     .comments
+        padding-bottom: $padding-vertical-sm-992px
         &__subtitle
             font-size: 16px
             line-height: 24px
@@ -547,9 +579,13 @@
             &-wrap
                 display: flex
                 justify-content: center
-    .departments__list
-        grid-template-columns: minmax(min-content,350px)
+    .departments
+        &__info
+            margin-bottom: $base * 15
+        &__list
+            grid-template-columns: minmax(min-content,350px)
     .main-doctors
+        padding-bottom: $padding-vertical-992px
         &__img
             width: Min(100%,400px)
             object-fit: cover
@@ -562,22 +598,23 @@
         line-height: 31px
     #map-yandex
         height: 300px
-    .feedback-form
-        grid-template-columns: 1fr
-
-        &__field
-            &--name
+    .feedback
+        padding-bottom: $padding-vertical-sm-992px
+        &-form
+            grid-template-columns: 1fr
+            &__field
+                &--name
+                    grid-column: 1
+                    grid-row: 1
+                &--email
+                    grid-column: 1
+                    grid-row: 2
+                &--subject
+                    grid-column: 1
+                    grid-row: 3
+                &--textarea
+                    grid-column: 1
+                    grid-row: 4
+            &__btn
                 grid-column: 1
-                grid-row: 1
-            &--email
-                grid-column: 1
-                grid-row: 2
-            &--subject
-                grid-column: 1
-                grid-row: 3
-            &--textarea
-                grid-column: 1
-                grid-row: 4
-        &__btn
-            grid-column: 1
-            grid-row: 5
+                grid-row: 5
