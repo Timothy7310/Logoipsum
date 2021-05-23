@@ -14,6 +14,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    //  Explore All button
+    const articles = document.querySelectorAll('.services__item');
+    const pageWidth = document.documentElement.scrollWidth;
+
+
+
+    if(pageWidth > 992 || pageWidth <= 576){
+        for (let i = 3; i < articles.length; i++){
+            const showMoreBtn = document.querySelector('.button-more');
+            articles[i].classList.add('services__item--hidden');
+                showMoreBtn.addEventListener('click', () => {
+                articles[i].classList.remove('services__item--hidden');
+                showMoreBtn.remove();
+            });
+        }
+    }
+    else if(pageWidth <= 992){
+        for (let i = 4; i < articles.length; i++){
+            const showMoreBtn = document.querySelector('.button-more');
+            articles[i].classList.add('services__item--hidden');
+            showMoreBtn.addEventListener('click', () => {
+                articles[i].classList.remove('services__item--hidden');
+                showMoreBtn.remove();
+            });
+        }
+    }
 
 
     // СЛАЙДЕР
@@ -41,36 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
         centeredSlides: true
     });
 
-
-
-    //  Explore All button
-    const articles = document.querySelectorAll('.services__item');
-    const pageWidth = document.documentElement.scrollWidth;
-
-
-
-    if(pageWidth > 992 || pageWidth <= 576){
-        for (let i = 3; i < articles.length; i++){
-            const showMoreBtn = document.querySelector('.button-more');
-            articles[i].classList.add('services__item--hidden');
-                showMoreBtn.addEventListener('click', () => {
-                articles[i].classList.remove('services__item--hidden');
-                showMoreBtn.remove();
-            });
-        }
-    }
-    else if(pageWidth <= 992){
-        for (let i = 4; i < articles.length; i++){
-            const showMoreBtn = document.querySelector('.button-more');
-            articles[i].classList.add('services__item--hidden');
-            showMoreBtn.addEventListener('click', () => {
-                articles[i].classList.remove('services__item--hidden');
-                showMoreBtn.remove();
-            });
-        }
-    }
-    
-    
 
     // КАРТА
     let spinner = document.querySelector('.loader');
