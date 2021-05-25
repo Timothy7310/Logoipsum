@@ -5,8 +5,11 @@ const concat       = require('gulp-concat');
 const browserSync  = require('browser-sync').create();
 const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
-const imagemin     = require('gulp-imagemin');
 const del          = require('del');
+const critical     = require('critical');
+
+
+let crPages = ['index', 'about-us', 'blog', 'contact', 'doctors', 'newsletter', 'order'];
 
 function browsersync(){
     browserSync.init({
@@ -20,30 +23,13 @@ function browsersync(){
 }
 
 function cleanDist(){
-    return del('dist')
+    return del('dist');
 }
 
-// function images(){
-//     return src('app/img/**/**/*')
-//         .pipe(imagemin(
-//             [
-//                 imagemin.gifsicle({interlaced: true}),
-//                 imagemin.mozjpeg({quality: 75, progressive: true}),
-//                 imagemin.optipng({optimizationLevel: 5}),
-//                 imagemin.svgo({
-//                     plugins: [
-//                         {removeViewBox: true},
-//                         {cleanupIDs: false}
-//                     ]
-//                 })
-//             ]
-//         ))
-//         .pipe(dest('dist/img'))
-// }
+
 
 function scripts() {
     return src([
-        // 'node_modules/jquery/dist/jquery.js',
         'node_modules/focus-visible/dist/focus-visible.min.js',
         'app/js/swiper-bundle.min.js',
         'app/js/main.js'
@@ -67,14 +53,46 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
+
+function criticalCSS(done) {
+    crPages.forEach(async page => {
+        await critical.generate({
+            base: './dist/',
+			src: `${page}.html`,
+			css: [ 'css/style.min.css' ],
+			target: {
+				css: `css/${page}-critical.css`,
+				//uncritical: `css/${page}-async.css`
+			},
+
+            // Viewport width
+            width: 1300,
+
+            // Viewport height
+            height: 800,
+
+            include: [
+                /footer/
+            ]
+
+        
+        });
+    });
+
+    done();
+}
+
+
 function build() {
     return src([
         'app/css/style.min.css',
+        'app/favicon/**/*',
         'app/fonts/**/*',
+        'app/img/**/*',
         'app/js/main.min.js',
         'app/*.html'
     ], {base: 'app'})
-        .pipe(dest('dist'))
+        .pipe(dest('dist'));
 }
 
 function watching() {
@@ -84,12 +102,16 @@ function watching() {
 }
 
 
+exports.criticalCSS = criticalCSS;
+
 exports.styles      = styles;
 exports.watching    = watching;
 exports.browsersync = browsersync;
 exports.scripts     = scripts;
-// exports.images      = images;
 exports.cleanDist   = cleanDist;
+exports.criticalCSS = criticalCSS;
 
 exports.build   = series(cleanDist, build);
 exports.default = parallel(styles, scripts, browsersync, watching);
+
+

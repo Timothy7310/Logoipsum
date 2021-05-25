@@ -253,7 +253,7 @@
             margin-bottom: $base * 10
     .main-article-card
         grid-template-columns: 1fr
-        grid-template-rows: repeat(3,min-content) 1fr
+        grid-template-rows: min-content minmax(467px, 1fr) min-content min-content
         &__link
             &-img
                 grid-column: 1
@@ -461,6 +461,8 @@
         &__list
             grid-template-columns: 1fr
             grid-row-gap: $base * 10
+    .main-article-card
+        grid-template-rows: min-content minmax(366px, 1fr) min-content min-content
 @media (max-width:576px)
     .container
         width: 90%
@@ -593,9 +595,14 @@
             &-wrap
                 display: flex
                 justify-content: center
-    .main-article-card__title
-        font-size: 23px
-        line-height: 31px
+    .main-article-card
+        grid-template-rows: min-content minmax(200px, 1fr) min-content min-content
+        &__title
+            font-size: 23px
+            line-height: 31px
+    .blog-card
+        display: grid
+        grid-template-rows: 200px repeat(3,min-content)
     #map-yandex
         height: 300px
     .feedback
