@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
+    
     // БУРГЕР
     document.querySelector('#burger').addEventListener('click', function(e){
         document.querySelector('body').classList.toggle('lock');
@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < span.length; i++){
             span[i].classList.toggle('active');
         }
+        if(document.querySelector('.header__burger').getAttribute('aria-label') == 'Open menu.'){
+            document.querySelector('.header__burger').setAttribute('aria-label', 'Close menu.');
+        } else if(document.querySelector('.header__burger').getAttribute('aria-label') == 'Close menu.'){
+            document.querySelector('.header__burger').setAttribute('aria-label', 'Open menu.');
+        }
+        console.log(document.querySelector('.header__burger').getAttribute('aria-label'));
     });
 
 
