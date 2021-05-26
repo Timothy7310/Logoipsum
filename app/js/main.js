@@ -177,11 +177,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     ymaps.load(init);
                 });         
             }
+            document.querySelector('.map-btn').remove();
         });
     };
 
+    
+    const mapBtn = function(eventName) {
+        document.querySelector('.map-btn').addEventListener(eventName, (e) =>{
+            e.preventDefault();
+            if (checkLoad == 0){
+                checkLoad = 1;
+                spinner.classList.add('is-active');
+
+                loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
+                    ymaps.load(init);
+                });  
+            }
+            document.querySelector('.map-btn').remove();
+        });
+    }
+
     ymap('mouseenter');
-    ymap('click');
+    mapBtn('click');
 
 }, false);
 
